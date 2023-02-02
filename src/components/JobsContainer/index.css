@@ -2,5 +2,83 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 75%;
+  width: 65%;
+  padding-left: 20px;
+  min-height: 90vh;
+}
+.search-input-container {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  width: 325px;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 16px;
+}
+
+.search-input {
+  background-color: transparent;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+}
+
+.search-icon {
+  color: #ffffff;
+  width: 20px;
+  height: 20px;
+}
+.search-button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.job-list-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 0px;
+}
+.failure-container {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.failure-image {
+  height: 170px;
+  width: 170px;
+}
+.failure-heading {
+  color: #ffffff;
+  font-size: 40px;
+  font-family: 'Roboto';
+}
+.failure-para {
+  color: #ffffff;
+  font-size: 13px;
+  font-family: 'Roboto';
+}
+.retry {
+  height: 35px;
+  background-color: #6366f1;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 13px;
+  font-size: 500;
+  font-family: 'Roboto';
+}
+.loader-container {
+  align-self: center;
 }

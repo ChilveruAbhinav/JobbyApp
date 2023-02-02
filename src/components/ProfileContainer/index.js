@@ -58,6 +58,7 @@ class ProfileContainer extends Component {
     profileImage: '',
     bio: '',
     userApiStatus: apiStatusConstants.initial,
+    employType: [],
   }
 
   componentDidMount() {
@@ -93,6 +94,13 @@ class ProfileContainer extends Component {
         userApiStatus: apiStatusConstants.failure,
       })
     }
+  }
+
+  employmentChecked = id => {
+    const {employType} = this.state
+    const {employTypeCheckbox} = this.props
+    employType.push(id)
+    employTypeCheckbox(employType)
   }
 
   renderLoadingView = () => (
@@ -138,6 +146,7 @@ class ProfileContainer extends Component {
 
   render() {
     // console.log(profileName, profileImage, bio)
+
     return (
       <div className="profile-container">
         {this.getProfileJsx()}
@@ -145,7 +154,11 @@ class ProfileContainer extends Component {
         <h1 className="heading-2">Type of Employment</h1>
         <ul className="check-list">
           {employmentTypesList.map(item => (
-            <CheckBoxItem key={item.employmentTypeId} CheckDetails={item} />
+            <CheckBoxItem
+              key={item.employmentTypeId}
+              CheckDetails={item}
+              employmentChecked={this.employmentChecked}
+            />
           ))}
         </ul>
 
